@@ -1,0 +1,51 @@
+<p>This is the partial for view 1.</p>
+<table>
+<tr><td>
+<form action = "view1.html" method ="GET">
+Enter date of birth:<input type="text" ng-model="user.date"><br>
+</td></tr>
+<tr><td>
+<input type="radio" ng-model="user.gender" name="gender" value="male">Male<br>
+<input type="radio" ng-model="user.gender" name="gender" value="female">Female
+</td><tr>
+</form>
+</table>
+
+<p>Your Akan name is: {{user|convertDate}}</p>
+
+
+<div
+  class="fb-like"
+  data-share="true"
+  data-width="450"
+  data-show-faces="true">
+</div>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Facebook Login JavaScript Example</title>
+<meta charset="UTF-8">
+</head>
+<body>
+<div id="fb-root">
+</div>
+<!--
+  Below we include the Login Button social plugin. This button uses
+  the JavaScript SDK to present a graphical Login button that triggers
+  the FB.login() function when clicked.
+-->
+
+<fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+</fb:login-button>
+
+<a href="reallylogout();" class="logOff">Log out</a>
+
+<fb:logout-button scope="public_profile,email" onlogout="logout(response);">
+</fb:logout-button>
+
+<div id="status">
+</div>
+
+</body>
+</html>
